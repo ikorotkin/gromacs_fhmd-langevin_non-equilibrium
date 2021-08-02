@@ -8,7 +8,7 @@ Modified GROMACS with thermostat-consistent fully coupled Molecular Dynamics –
 
 The installation procedure of the code is completely the same as installation of the original [Gromacs 2016](https://manual.gromacs.org/documentation/2016/install-guide/index.html).
 
-The following is the typical installation in Linux System:
+The following is the typical installation on Linux system:
 
 ```bash
 cd gromacs_fhmd-langevin_non-equilibrium
@@ -24,7 +24,7 @@ make
 make install
 ```
 
-If you want to switch to debug mode, the `cmake` step above should be modified to:
+If you want to switch to debug mode, `cmake` step above should be modified to:
 
 ```bash
 cmake .. -DGMX_BUILD_OWN_FFTW=ON -DCMAKE_INSTALL_PREFIX=$PWD -DCMAKE_BUILD_TYPE=Debug
@@ -95,7 +95,7 @@ Flow_output  = 0    ; Starting step output flow information
 
 ## Comparison between MD-FH coupled simulation and pure MD simulation
 
-A simple method to execute a pure MD simulation and simultaneously obtain the fluctuation parameters is to set `S = 0` in `coupling.prm`. Setting `scheme = 0` can also switch to pure MD simulations, but the fluctuations won't be output directly.
+The easiest method to execute a pure MD simulation and simultaneously obtain the fluctuation parameters is to set `S = 0` in `coupling.prm`. Setting `scheme = 0` can also switch to pure MD simulations, but the fluctuations won't be output directly.
 
 ## Licensing
 
